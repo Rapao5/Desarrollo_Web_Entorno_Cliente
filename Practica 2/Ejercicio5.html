@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+<body>
+    <h1>Ejercicio 5</h1>
+    <h3>Reloj sin booleano</h3>
+    <script>
+        // Da la hora cada 30 minutos sin booleano
+        let hora = 9;
+        for(hora; hora<22; hora++){
+           document.write(" "+hora+":00");
+           document.write(" "+hora+":30");
+        }
+    </script>
+    <br>
+    <br>
+    <h3>Reloj con booleano</h3>
+    <script>
+        //Da la hora utilizando el booleano
+        let hora2 = 9;
+        let mediaHora = true;
+        for(i=1; i<27; i++){
+            //utilizo el ternario para decidir cambiar de true a false
+            if(mediaHora==true){
+                document.write(" "+hora2+":00");
+            }else{
+                document.write(" "+hora2+":30");
+                hora2++;
+            }
+            mediaHora?mediaHora=false:mediaHora=true;
+        }
+    </script>
+</body>
+</html>

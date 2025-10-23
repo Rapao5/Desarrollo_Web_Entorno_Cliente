@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercio 9</title>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <script>
+        let repuesta;
+        let pregunta = "¿Cuál fue el primer presidente de la democracia española?";
+        respuesta = prompt(pregunta).toLocaleLowerCase();
+        while(respuesta!="adolfo suarez"){
+            switch(respuesta){
+            case "adolfo":
+                respuesta = prompt("Te falta su apellido. "+pregunta).toLocaleLowerCase();
+                break;
+            case "suarez":
+                respuesta = prompt("Te falta su nombre. "+pregunta).toLocaleLowerCase();
+                break;
+            default:
+                respuesta = prompt("ERROR. Inténtelo de nuevo"+pregunta).toLocaleLowerCase();
+                break;
+        }
+            
+        };    
+    </script>
+    <p>
+    Nadie imaginaba entonces que, 20 años después, aquel licenciado en Derecho<br>
+    recibiría el premio Príncipe de Asturias de la Concordia por su<br>
+    «ejemplar comportamiento político en la fundación de nuestra democracia».
+    </p>
+    <a href="https://www.elmundo.es/especiales/espana/adolfo_suarez/perfil/index.html#:~:text=Pocas%20veces%20un%20pol%C3%ADtico%20recibe,de%20esos%20pocos%20'elegidos'.">El Mundo</a>
+</body>
+</html>

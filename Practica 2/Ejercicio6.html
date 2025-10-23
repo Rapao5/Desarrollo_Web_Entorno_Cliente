@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6</title>
+</head>
+<body>
+    <h1>Ejercicio 6</h1>
+    <script>
+        let horas=9;
+        let minutos;
+        for(horas; horas<22; horas++){
+            document.write(" "+horas +":00");
+            minutos=5;
+            for(minutos; minutos<60; minutos+=5){
+                minutos==5?document.write(" "+horas+":05"):document.write(" "+horas+":"+minutos);
+            }
+        }
+    </script>
+</body>
+</html>
