@@ -3,6 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9</title>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <script>
+        let respuesta = prompt("Añade la edad");
+        /**
+        if(respuesta > 0 && respuesta <= 12){
+            alert("Eres un niño");
+        }else if(respuesta > 12 && respuesta <= 26){
+            alert("Eres joven");
+        }else if(respuesta > 26 && respuesta <= 60){
+            alert("Eres un adulto");
+        }else if(respuesta > 60){
+            alert("Eres un jubilado");
+        }*/
+        switch(!isNaN(respuesta)){
+            case (respuesta<=12):
+             alert("Eres un niño");
+            break;
+             case (respuesta <= 26):
+             alert("Eres joven");
+            break;
+             case (respuesta<= 60):
+             alert("Eres un adulto");
+            break;
+             case (respuesta > 60):
+              alert("Eres un jubilado");
+            break;
+            default:
+            break;
+        };
+    </script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercio 9</title>
 </head>
 <body>
@@ -33,4 +73,4 @@
     </p>
     <a href="https://www.elmundo.es/especiales/espana/adolfo_suarez/perfil/index.html#:~:text=Pocas%20veces%20un%20pol%C3%ADtico%20recibe,de%20esos%20pocos%20'elegidos'.">El Mundo</a>
 </body>
-</html>
+</html>-->
