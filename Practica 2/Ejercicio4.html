@@ -10,7 +10,9 @@
     <script>
         let respuesta = prompt ("Añade la edad");
 
-        if(respuesta > 0 && respuesta <= 12){
+        if(isNaN(respuesta)){
+            alert(NaN);
+        }else if(respuesta > 0 && respuesta <= 12){
             alert("Eres un niño");
         }else if(respuesta > 12 && respuesta <= 26){
             alert("Eres joven");
