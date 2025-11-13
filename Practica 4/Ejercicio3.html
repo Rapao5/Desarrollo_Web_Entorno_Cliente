@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        function fecha(){
+            let date = new Date();
+            document.write(date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear());
+        } 
+        function fecha2(){
+            let date = new Date();
+            let mes;
+            let diaSem;
+            switch(date.getDay()){
+                case 0:
+                diaSem = "Lunes ";
+                    break;
+                case 1:
+                diaSem = "Martes ";
+                    break;
+                case 2:
+                diaSem = "Miercoles ";
+                    break;
+                case 3:
+                diaSem = "Jueves ";
+                    break;
+                case 4:
+                diaSem = "Viernes ";
+                    break;
+                case 5:
+                diaSem = "Sádado ";
+                    break;
+                case 6:
+                diaSem = "Domingo ";
+                    break;
+            }
+            switch(date.getMonth()){
+                case 0:
+                mes = "Enero";
+                    break;
+                case 1:
+                mes = "Febrero";
+                    break;
+                case 2:
+                mes = "Marzo";
+                    break;
+                case 3:
+                mes = "Abril";
+                    break;
+                case 4:
+                mes = "Mayo";
+                    break;
+                case 5:
+                mes = "Junio";
+                    break;
+                case 6:
+                mes = "Julio";
+                    break;
+                case 7:
+                mes = "Agosto";
+                    break;
+                case 8:
+                mes = "Septiembre";
+                    break;
+                case 9:
+                mes = "Octubre";
+                    break;
+                case 10:
+                mes = "Noviembre";
+                    break;
+                case 11:
+                mes = "Diciembre";
+                    break;
+            }
+            document.write(diaSem + ", " + date.getDate() + " de " + mes + " de " + date.getFullYear());
+        } 
+        function fecha3(){
+            let date = new Date();
+            let mes;
+            let diaSem;
+            switch(date.getDay()){
+                case 0:
+                diaSem = "Monday ";
+                    break;
+                case 1:
+                diaSem = "Tuesday ";
+                    break;
+                case 2:
+                diaSem = "Wednesday ";
+                    break;
+                case 3:
+                diaSem = "Thursday ";
+                    break;
+                case 4:
+                diaSem = "Friday ";
+                    break;
+                case 5:
+                diaSem = "Saturday ";
+                    break;
+                case 6:
+                diaSem = "Sunday ";
+                    break;
+            }
+            switch(date.getMonth()){
+                case 0:
+                mes = "January";
+                    break;
+                case 1:
+                mes = "February";
+                    break;
+                case 2:
+                mes = "March";
+                    break;
+                case 3:
+                mes = "April";
+                    break;
+                case 4:
+                mes = "May";
+                    break;
+                case 5:
+                mes = "June";
+                    break;
+                case 6:
+                mes = "July";
+                    break;
+                case 7:
+                mes = "August";
+                    break;
+                case 8:
+                mes = "September";
+                    break;
+                case 9:
+                mes = "October";
+                    break;
+                case 10:
+                mes = "November";
+                    break;
+                case 11:
+                mes = "December ";
+                    break;
+            }
+            document.write(diaSem + ", "  + mes + " "+date.getDate()+", " + date.getFullYear());
+        }
+    </script>
+</head>
+<body>
+    <a>Formatos de horas</a>
+    <button onclick="fecha()">Fecha 1</button>
+    <button onclick="fecha2()">Fecha 2</button>
+    <button onclick="fecha3()">Fecha 3</button>
+</body>
+</html>

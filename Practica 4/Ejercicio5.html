@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script>
+        function opciones(value){
+            let formulario = document.getElementById("formulario");
+            if(value==1){
+                formulario.innerHTML="<input type='number' id='base' placeholder='Base'><input type='number' id='exponente' placeholder='Exponente'><button onclick='potencia()'>Calcular</button>";
+            }
+            if(value==2){
+                formulario.innerHTML="<input type='number' id='numero' placeholder='Número'><button onclick='raiz()'>Calcular</button>";
+            }
+            if(value==3){
+                formulario.innerHTML="<input type='number' id='decimal' placeholder='Decimal'><button onclick='decimal()'>Calcular</button>";
+            }
+            if(value==4){
+                formulario.innerHTML="<input type='number' id='angulo' placeholder='Angulo'><button onclick='angulo()'>Calcular</button>";
+            }
+        }
+        function potencia(){
+            let resultado = document.getElementById("resultado");
+            let base = document.getElementById("base").value;
+            let exponente = document.getElementById("exponente").value;
+            let resultado2 = Math.pow(base, exponente);
+            resultado.innerHTML="La potencia de "+base+" elevado a "+exponente+" es: " + resultado2;
+        }
+        function raiz(){
+            let resultado = document.getElementById("resultado");
+            let numero = document.getElementById("numero").value;
+            if(numero < 0){
+                resultado.innerHTML="El número debe ser positivo.";
+            }else{
+                let resultado2 = Math.sqrt(numero);
+                resultado.innerHTML="La raíz de " + numero+" es: " + resultado2;
+            }
+            
+        }
+        function decimal(){
+            let resultado = document.getElementById("resultado");
+            let decimal = document.getElementById("decimal").value;
+            let resultado2 = Math.floor(decimal);
+            let resultado3 = Math.ceil(decimal);
+            resultado.innerHTML="Del número " + decimal + ", su redondeo mayor es: " + resultado3 + " y su redondeo menor es: " +resultado2;
+        }
+        function angulo(){
+            let resultado = document.getElementById("resultado");
+            let angulo = document.getElementById("angulo").value;
+            if(angulo < 0 || angulo > 360){
+                resultado.innerHTML="El número de grados debe estar entre 0 y 360.";
+            }else{
+                let seno = Math.sin(angulo);
+                let coseno = Math.cos(angulo);
+                let tangente = Math.tan(angulo);
+                resultado.innerHTML="Valor: " + angulo + " Seno: " + seno + " Conseno: " + coseno + " Tangente: " + tangente;
+            }
+        }
+    </script>
+</head>
+<body>
+    <a>Elige una opción.</a>
+    <button onclick="opciones(1)"> 1. Potencia</button>
+    <button onclick="opciones(2)">2. Raíz</button>
+    <button onclick="opciones(3)">3. Redondeo</button>
+    <button onclick="opciones(4)">4. Trigonometria</button>
+    <div id="formulario">
+
+    </div>
+    <p id="resultado">
+
+    </p>
+    
+</body>
+</html>

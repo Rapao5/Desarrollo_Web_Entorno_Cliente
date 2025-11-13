@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script>
+        function comprobar(){
+            let resultado = document.getElementById("resultado");
+            let contra = document.getElementById("contrasena").value;
+            let especiales = "-_@#$%&";
+            let contieneMayuscula = false;
+            let contieneMinuscula = false;
+            let contieneNumero = false;
+            let contieneEspecial = false;
+            if(contra.length < 8 || contra.length > 16){
+                resultado.innerHTML="La contraseña debe estar entre 8 y 18 caracteres."
+            }else{
+                for(let i=0; i < contra.length; i++){
+                    let caracter = contra[i];
+                    if (caracter >= 'A' && caracter <= 'Z') {
+                        contieneMayuscula = true;
+                    }
+                    if(caracter >= 'a' && caracter <= 'z'){
+                        contieneMinuscula = true;
+                    }
+                    if(caracter >= '0' && caracter <= '9'){
+                        contieneNumero = true;
+                    }
+                    if(especiales.includes(caracter)){
+                        contieneEspecial = true;
+                    }
+                }
+                    if(contieneMayuscula == false){
+                        resultado.innerHTML="La contraseña debe contener al menos una letra en máyuscula.";
+                    }else{
+                        if(contieneMinuscula== false){
+                            resultado.innerHTML="La contraseña debe contener al menos una letra en minuscula.";
+                        }else{
+                            if(contieneNumero==false){
+                                resultado.innerHTML="La contraseña debe contener al menos un número.";
+                            }else{
+                                if(contieneEspecial==false){
+                                    resultado.innerHTML="La contraseña debe contener al menos un caracter especial.";
+                                }else{
+                                    resultado.innerHTML="La contraseña se a actualizado correctamente.";
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="contrasena" id="contrasena" placeholder="Contraseña">
+    <button onclick="comprobar()">Enviar</button>
+    <p id="resultado"></p>
+</body>
+</html>

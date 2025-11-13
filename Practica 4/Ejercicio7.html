@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script>
+        function calculo(){
+            let resultado = document.getElementById("resultado");
+            let numero = new Number(document.getElementById("numero").value);
+            let exponente = numero.toExponential();
+            let decimal = numero.toFixed(4);
+            let binario = numero.toString(2);
+            let octal = numero.toString(8);
+            let hexadecimal = numero.toString(16);
+            resultado.innerHTML="Número: " + numero + " Exponente: "+ exponente + " Decimal: " + decimal + " Binario: " + binario + " Octal: " + octal + " Hexadecimal: " + hexadecimal; 
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Número"><button onclick="calculo()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>

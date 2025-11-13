@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <a>Añade tu fecha de cumpleaños</a>
+    <input type="date" id="cumple" name="cumple">
+    <button onclick="fecha()">Botón</button>
+    <script>
+        function fecha() {
+            let cumpleaños = document.getElementById("cumple").value;
+            let date = new Date();
+            let dateC = new Date(cumpleaños);
+            dateC.setFullYear(date.getFullYear());
+            let domingos = 0;
+            let dateF = new Date(dateC);
+
+            while(dateF.getFullYear() != 2101){
+                if(dateF.getDay() == 0){
+                    domingos++;
+                }
+                dateF.setFullYear(dateF.getFullYear() + 1);
+            }
+
+            document.write("Desde " + dateC.toLocaleDateString() + " hasta el año 2100 hay: " + domingos + " domingos.");
+        }   
+    </script>
+</body>
+</html>

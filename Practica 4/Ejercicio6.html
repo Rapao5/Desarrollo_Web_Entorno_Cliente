@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <script>
+        function calcular(){
+            let resultado = document.getElementById("resultado");
+            let radio = document.getElementById("radio").value;
+            let diametro = Math.pow(radio, 2);
+            let perimetro = (radio * 2) * Math.PI;
+            let area = (Math.PI * Math.pow(radio, 2));
+            let volumen = ((Math.pow(radio, 3) * Math.PI) * 4/3);
+            resultado.innerHTML="El valor de Radio: " + radio + " El valor de diametro: " + diametro + " El valor de perimetro: " + perimetro + " El valor de área: " + area + " El valor de volumen: " +volumen;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="radio" placeholder="Radio"><button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>

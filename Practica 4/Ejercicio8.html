@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script>
+        function manipular(){
+            let resultado = document.getElementById("resultado");
+            let nombre = document.getElementById("nombre").value;
+            let nombreSinEspacios = nombre.replace(/ /g, '');
+            let tamaño = nombreSinEspacios.length();
+            let nombreMayus = nombre.toUpperCase();
+            let nombreMinus = nombre.toLowerCase();
+            let nombreDividido = nombre.trim().split(/\s+/).join('/');
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <button onclick="manipular()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>

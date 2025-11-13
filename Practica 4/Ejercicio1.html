@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let date = new Date();
+        let dateF = new Date("June 24, 2026");
+        let dateR = Math.round((dateF.getTime()-date.getTime())/1000/60/60/24)+1;
+        let mes ="";
+        switch(date.getMonth()){
+            case 0:
+                mes=" Enero "
+                break;
+            case 1:
+                 mes=" Febrero "
+                break;
+            case 2:
+                 mes=" Marzo "
+                break;
+            case 3:
+                 mes=" Abril "
+                break;
+            case 4:
+                 mes=" Mayo "
+                break;
+            case 5:
+                 mes=" Junio "
+                break;
+            case 6:
+                 mes=" Julio "
+                break;
+            case 7:
+                 mes=" Agosto "
+                break;
+            case 8:
+                 mes=" Septiembre "
+                break;
+            case 9:
+                 mes=" Octubre "
+                break;
+            case 10:
+                 mes=" Noviembre "
+                break;
+            case 11:
+                 mes=" Diciembre "
+                break;
+        }
+        document.write("Desde el dia " + date.getDate() + " de " + mes + " del año " + date.getFullYear() + " hasta final de curso el 24 de Junio de 2026 faltan " + dateR + " días.");
+    </script>
+</body>
+</html>
