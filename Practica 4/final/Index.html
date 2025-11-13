@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación Deportiva Castro Urdiales</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        setTimeout(()=>alert("Bienvenido a la Asociación Deportiva Castro Urdiales."), 10000)
+    </script>
+</head>
+<body>
+    <header>
+        <a href="Index.html" class="logo"><img src="imagenes/logo.png"></a>
+        <h2>Asociación Deportiva Castro Urdiales.</h2>
+        <p id="horario"></p>
+    </header>
+    <main>
+        <div class="contra">
+            <h3>Añade su contraseña</h3>
+            <input type="text" name="contrasena" id="contrasena" placeholder="Contraseña">
+            <button onclick="comprobar()">Enviar</button>
+            <p id="resultado"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Web desarrollada por: Pablo Valero López</p>
+        <h3>Asociación Deportiva Castro Urdiales.</h3>
+        <a href="legal.html">Aviso legal</a>
+    </footer>
+    <script>
+        let date = new Date();
+        let horario = document.getElementById("horario");
+        horario.innerHTML= "Fecha: "+date.getDate()+ "/" + (date.getMonth()+1) + "/" + date.getFullYear();
+         function comprobar(){
+            let resultado = document.getElementById("resultado");
+            let contra = document.getElementById("contrasena").value;
+            let especiales = "-_@#$%&";
+            let contieneMayuscula = false;
+            let contieneMinuscula = false;
+            let contieneNumero = false;
+            let contieneEspecial = false;
+            if(contra.length < 8 || contra.length > 16){
+                resultado.innerHTML="La contraseña debe estar entre 8 y 18 caracteres."
+            }else{
+                for(let i=0; i < contra.length; i++){
+                    let caracter = contra[i];
+                    if (caracter >= 'A' && caracter <= 'Z') {
+                        contieneMayuscula = true;
+                    }
+                    if(caracter >= 'a' && caracter <= 'z'){
+                        contieneMinuscula = true;
+                    }
+                    if(caracter >= '0' && caracter <= '9'){
+                        contieneNumero = true;
+                    }
+                    if(especiales.includes(caracter)){
+                        contieneEspecial = true;
+                    }
+                }
+                    if(contieneMayuscula == false){
+                        resultado.innerHTML="La contraseña debe contener al menos una letra en máyuscula.";
+                    }else{
+                        if(contieneMinuscula== false){
+                            resultado.innerHTML="La contraseña debe contener al menos una letra en minuscula.";
+                        }else{
+                            if(contieneNumero==false){
+                                resultado.innerHTML="La contraseña debe contener al menos un número.";
+                            }else{
+                                if(contieneEspecial==false){
+                                    resultado.innerHTML="La contraseña debe contener al menos un caracter especial.";
+                                }else{
+                                    resultado.innerHTML="La contraseña se a actualizado correctamente.";
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    </script> 
+</body>
+</html>
