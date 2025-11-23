@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación Deportiva Castro Urdiales</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <header>
+        <a href="funciones.html" class="logo"><img src="imagenes/logo.png"></a>
+        <h2>Asociación Deportiva Castro Urdiales.</h2>
+        <p id="horario"></p>
+    </header>
+    <main>
+        <div class="enlaces">
+            <ul>
+                <li><a onclick="datos(1)">Calcular masa</a></li>
+                <li><a onclick="datos(2)">Calcular frecuencia</a></li>
+                <li><a onclick="datos(3)">Calcular categoria</a></li>
+                <li><a onclick="crearHorario()">Horario</a></li>
+            </ul>
+        </div>
+        <div class="contra">
+            <p id="resultado2">¡Hola! No prometemos abdominales, pero sí resultados.
+                Has entrado en el portal secreto donde los cálculos deportivos se mezclan con misteriosas fórmulas para saber si eres campeón… o simplemente buen comedor de bocadillos. Aquí no importa tu edad ni tu peso, lo que importa es que tu dedo índice se convierta en el atleta más entrenado del teclado. Si alguna vez te preguntaste cuántos puntos extra da calcular la masa después de comer pizza, la respuesta está justo aquí: ninguno, pero suena científico.
+            </p>
+            <p id="resultado"></p>
+        </div>
+        <div id="corredor">🧍‍♂️</div>
+    </main>
+    <footer>
+        <p>Web desarrollada por: Pablo Valero López</p>
+        <h3>Asociación Deportiva Castro Urdiales.</h3>
+        <a href="legal.html">Aviso legal</a>
+    </footer> 
+</body>
+<!--Este último script es IA pero queda guay-->
+<script>
+const corredor = document.getElementById("corredor");
+let corriendo = false; // empieza parado
+
+corredor.addEventListener("click", () => {
+  if (corriendo) {
+    // Detener y volver a parado en el centro
+    corredor.classList.remove("corriendo");
+    corredor.textContent = "🧍‍♂️";
+    corredor.style.left = "50%";
+    corredor.style.transform = "translate(-50%, -50%)";
+    corriendo = false;
+  } else {
+    // Activar animación de correr
+    corredor.classList.add("corriendo");
+    corredor.textContent = "🏃‍♂️";
+    corriendo = true;
+  }
+});
+</script>
+</html>

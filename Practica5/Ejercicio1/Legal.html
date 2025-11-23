@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación Deportiva Castro Urdiales</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <header>
+        <a href="funciones.html" class="logo"><img src="imagenes/logo.png"></a>
+        <h2>Asociación Deportiva Castro Urdiales.</h2>
+        <p id="horario"></p>
+    </header>
+    <main>
+    <div>
+        <h1>Aviso Legal</h1>
+        <h4>1. Información General</h4>
+        <p class="legal">Este sitio web es propiedad de Entropía Digital S.A., con domicilio fiscal en la Calle de los Bytes Perdidos, nº 404, Madrid, España. El acceso y uso del sitio implica la aceptación plena y sin reservas de las siguientes condiciones.</p>
+        <h4>2. Propiedad Intelectual</h4>
+        <p class="legal">Todos los contenidos, incluyendo pero no limitándose a textos, imágenes, sonidos, algoritmos que bailan flamenco y recetas de tortilla sin huevo, son propiedad exclusiva de Entropía Digital S.A. Queda prohibida su reproducción, distribución o modificación sin autorización escrita, firmada y sellada por un unicornio notarial.</p>
+        <h4>3. Responsabilidad del Usuario</h4>
+        <p class="legal">El usuario se compromete a no utilizar este sitio para invocar demonios, hackear tostadoras inteligentes ni organizar partidas ilegales de parchís interdimensional. Cualquier infracción será sancionada con la obligación de escuchar 3 horas de flauta dulce desafinada.</p>
+        <h4>4. Cookies y Datos Personales</h4>
+        <p class="legal">Este sitio utiliza cookies, galletas, bizcochos y ocasionalmente magdalenas para mejorar la experiencia del usuario. Al navegar, aceptas que podamos enviarte memes por telepatía y que tus datos sean almacenados en una caja fuerte custodiada por un gato llamado Ernesto.</p>
+        <h4>5. Jurisdicción y Ley Aplicable</h4>
+        <p class="legal">Cualquier disputa será resuelta en los tribunales de Murcia, salvo que ambas partes acuerden resolverlo mediante duelo de miradas intensas o batalla de chistes malos.</p>
+        <h4>6. Cláusula Oculta 42.b – Incidentes Académicos</h4>
+        <p class="legal">En cumplimiento del protocolo interno de Entropía Educativa, se recuerda que los altercados entre docentes y alumnos deben ser reportados con discreción. Como ejemplo, se cita el caso de la profesora Klara, quien en 2019 confiscó un dron que el alumno Pau usaba para espiar exámenes desde el techo del aula. El dron fue posteriormente reprogramado para repartir fotocopias, aunque ocasionalmente lanzaba confeti sin previo aviso. El incidente se resolvió con una mediación en la sala de profesores y una tarta de zanahoria.</p>
+        <h4>7. Modificaciones del Aviso Legal</h4>
+        <p class="legal">Entropía Digital S.A. se reserva el derecho de modificar este aviso legal, añadir más cláusulas absurdas o incluir referencias a películas de culto sin previo aviso.</p>
+    </div>
+    </main>
+    <footer>
+        <p>Web desarrollada por: Pablo Valero López</p>
+        <h3>Asociación Deportiva Castro Urdiales.</h3>
+        <a href="Legal.html">Aviso legal</a>
+    </footer>
+    <script>
+        let date = new Date();
+        let horario = document.getElementById("horario");
+        horario.innerHTML= "Fecha: "+date.getDate()+ "/" + (date.getMonth()+1) + "/" + date.getFullYear();
+    </script> 
+</body>
+</html>

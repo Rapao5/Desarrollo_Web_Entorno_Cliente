@@ -1,0 +1,125 @@
+html{
+    height: 100%;
+}
+img{
+    width: 80px;
+    height: 80px;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    margin-bottom: 5%;
+    background-color: rgb(9, 92, 226);
+}
+p{
+    color: white;
+}
+main{
+    flex: 1;
+    padding: 20px;
+}
+footer{
+    background-color: rgb(9, 92, 226);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+div{
+    background-color: rgb(5, 168, 255);
+    height: 1000px;
+    width: 600px;
+    margin-left: 30%;
+    margin-bottom: 10%;
+}
+h1{
+    margin-left: 35%;
+}
+h2{
+    margin-right: 10%;
+}
+h4{
+    margin-left: 3%;
+}
+.legal{
+    color: black;
+}
+p{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+h3{
+    margin-right: 7%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("imagenes/logo.png");
+    background-position: top center;
+    background-size: 20%;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+input{
+    margin-bottom: 2%;
+}
+.contra{
+    min-width: 400px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 400px;
+    margin: auto;
+}
+.enlaces{
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin-left: 0;
+}
+#resultado2 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px; /* Espacio entre elementos */
+    padding: 20px;
+}
+#resultado{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+#corredor {
+    margin: auto;
+    width: 0;
+    height: 0;
+    top: 84%;
+    left: 47%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* Animación de correr */
+@keyframes correr {
+  from { left: 0; }
+  to { left: 95%; }
+}
+
+/* Clase que activa la carrera */
+.corriendo {
+  animation: correr 6s linear infinite alternate;
+}
