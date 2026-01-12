@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function translatePigLatin(str) {
+  let str1=str.toLowerCase();
+  let letra = str1.charAt(0);
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+     str1=str1.replace(letra, "");
+    str1 = str1 + letra + "ay";
+  }else{
+    str1=str1.replace(letra, "");
+    str1 = str1 + letra + "way";
+  }
+  return str1;
+}
+
+console.log(translatePigLatin("consonant"));
+    </script>
+</body>
+</html>
