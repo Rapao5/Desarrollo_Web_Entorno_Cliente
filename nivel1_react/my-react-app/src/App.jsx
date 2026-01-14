@@ -1,6 +1,7 @@
 export default function App() {
 return (
         <>
+        <h1>Segundo nivel de React</h1>
         {/*Comentario dentro de JSX*/}
         <Componentes/>
         </>
