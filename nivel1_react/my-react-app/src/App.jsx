@@ -1,37 +1,25 @@
-export default function App() {
-return (
-        <>
-        <h1>Segundo nivel de React</h1>
-        {/*Comentario dentro de JSX*/}
-        <Componentes/>
-        </>
-    )
-}
+function App() {
 
-function Componentes(){
+    const users = [
+        {id:1, name:'Jose', role:'Web Developer'},
+        {id: 2, name:'Estefania', role:'Web Developer'},
+        {id: 3, name:'Ruben', role:'Team Leader'},
+        {id: 4, name:'Juanky', role:'Web Developer'}
+    ]
     return (
         <>
-        <UserComponent/>
-        <ProfileComponent/>
-        <FeedComponent/>
+        <p>Lista de usuarios activos:</p>
+        <ul>
+            {users.map(function (users){
+                return (
+                    <li key={users.id} className={users.role}>
+                    {users.name} — {users.role}
+                    </li>
+                )
+            })}
+        </ul>
         </>
     )
 }
 
-function UserComponent(){
-    return <>
-        <h2>1º Componente</h2>
-        </>
-}
-function ProfileComponent(){
-    return <>
-        <h3>2º Componente</h3>
-        </>
-}
-function FeedComponent(){
-    return <>
-        <h4>3º Componente</h4>
-        </>
-}
-// Comentario fuera de return
-// export default App
+export default App
