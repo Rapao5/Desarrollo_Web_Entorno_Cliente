@@ -1,25 +1,14 @@
-function App() {
+function ParentComponent() {
 
-    const users = [
-        {id:1, name:'Jose', role:'Web Developer'},
-        {id: 2, name:'Estefania', role:'Web Developer'},
-        {id: 3, name:'Ruben', role:'Team Leader'},
-        {id: 4, name:'Juanky', role:'Web Developer'}
-    ]
-    return (
-        <>
-        <p>Lista de usuarios activos:</p>
-        <ul>
-            {users.map(function (users){
-                return (
-                    <li key={users.id} className={users.role}>
-                    {users.name} — {users.role}
-                    </li>
-                )
-            })}
-        </ul>
-        </>
-    )
+    function greetings(){
+        return "Yo aprendí a programar en foros y en mis tiempos compilabamos a mano."
+    }
+
+    return <ChildComponent greetings={greetings}/>
+   
+}
+function ChildComponent(props){
+    return <p>{props.greetings()}</p>
 }
 
-export default App
+export default ParentComponent
