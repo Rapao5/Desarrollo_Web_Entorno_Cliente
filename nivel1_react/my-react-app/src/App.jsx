@@ -1,14 +1,17 @@
+import {useState} from "react"
+
 function ParentComponent() {
-
-    function greetings(){
-        return "Yo aprendí a programar en foros y en mis tiempos compilabamos a mano."
-    }
-
-    return <ChildComponent greetings={greetings}/>
-   
+    const [name, setName] = useState("Juanaco")
+    return <ChildComponent name={name} setName={setName} />
 }
 function ChildComponent(props){
-    return <p>{props.greetings()}</p>
+    return (
+        <>
+            <h1>Hello {props.name}</h1>
+            <button onClick={ () => props.setName("Juanky")}> Change name</button>
+            <button onClick={ () => props.setName("Klara")}> Saluda a la jefa</button>
+        </>
+    )
 }
 
 export default ParentComponent
