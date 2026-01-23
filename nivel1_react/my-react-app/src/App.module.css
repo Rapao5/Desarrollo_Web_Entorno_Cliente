@@ -1,0 +1,6 @@
+.textoBase{
+    color: blueviolet;
+}
+.textoModificado:hover{
+    color: red
+}

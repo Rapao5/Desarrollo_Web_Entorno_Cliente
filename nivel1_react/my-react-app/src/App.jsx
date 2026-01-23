@@ -1,44 +1,17 @@
-import {useState} from 'react'
+import './style.css'; 
 
-function App(){
-    const [isParagraphVisible, setIsParagraphVisible] = useState(true)
-    const toggleStatus = () => {
-    setIsParagraphVisible(!isParagraphVisible)
-    }
-
-    const [newContador, setNewContador] = useState(0)
-    const [modo, setModo] = useState()
-
-    const [estadoBoton, setEstadoBoton] = useState(true)
-    const cambiarBoton = () => {
-        setEstadoBoton(!estadoBoton)
-    }
- 
-    return (
-        <>
-        <h1>Miniretillo</h1>
-        {isParagraphVisible && (
-        <p>Este es un texto oculto.</p>
-        )}
-        <button onClick={toggleStatus}>
-        {isParagraphVisible ? 'Esconder' : 'Mostrar'} texto
-        </button>
-        <p>Contador {newContador}</p>
-        <button onClick={() => setNewContador((n) => n + 1)}>+1
-        numero</button>
-        <button onClick={() => setNewContador(0)}>Reset</button>
-        <br/>
-        <br/>
-        <input type="text" value={modo} placeholder='Añade algo (papafrita)' onChange={(e)=>setModo(e.target.value)}/>
-        {modo && <p>{modo}</p>}
-        <br/>
-        <br/>
-        {estadoBoton && (
-            <p>Este botón ya estaba al inicio.</p>
-        )}
-        <button onClick={cambiarBoton}>{estadoBoton ? 'Ocultar' : 'Mostrar'}</button>
-        </>
-    )
+function App() {
+return (
+<div className='centrar'>
+<h1 className='text-3xl font-bold'>Klara la jefa</h1>
+<p className='mt-2 text-sm opacity-80'>
+Foros de programación
+</p>
+<button className='mt-4 px-4 py-2 text-white bg-blue-500 rounded paragraph-text'>
+Entrar
+</button>
+</div>
+);
 }
 
 export default App
