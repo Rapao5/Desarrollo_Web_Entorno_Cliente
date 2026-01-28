@@ -8,7 +8,7 @@ function App() {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         if (usernameError || emailError || passwordError) {
-            alert('No se puede enviar: el formulario contiene errores');
+            alert('No se puede enviar: el formulario contiene errores');  
         } else {
             alert(`${username}, ${email}, ${password}`);
         }
